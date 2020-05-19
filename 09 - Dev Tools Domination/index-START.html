@@ -18,28 +18,46 @@
     }
 
     // Regular
-
+    console.log('heloo')
     // Interpolated
-
+    var a='a'
+    console.log(`${a}`)
     // Styled
+    console.log('%cfala mano', 'color: black; font-size: 22px; background:yellow')
 
     // warning!
-
+    console.warn('Deu ruim irmao')
     // Error :|
+    console.error('fudeu')
 
     // Info
-
+    console.info('ng liga')
     // Testing
-
+    console.assert(true !== true, 'eh vdd mermo')
     // clearing
-
+    console.clear()
     // Viewing DOM Elements
-
+    const p = document.querySelector('p')
+    console.dir(p)
     // Grouping together
-
+    dogs.forEach(dog =>{
+      console.log(dog)
+    })
     // counting
-
+    console.count('Renan')
+    console.count('Renan')
+    console.count('Renan')
+    console.count('Renan')
     // timing
+    console.time('fetching data');
+    fetch('https://api.github.com/users/wesbos')
+      .then(data => data.json())
+      .then(data => {
+        console.timeEnd('fetching data');
+        console.log(data);
+      });
+
+    console.table(dogs);
 
   </script>
 </body>
